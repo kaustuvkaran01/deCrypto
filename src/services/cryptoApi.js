@@ -5,7 +5,7 @@ const cryptoApiHeaders = {
   "x-rapidapi-key": "85152d251cmsh66560a409ec6c6fp1e4e35jsn89bed3066765",
 };
 
-const baseUrl = "https://rapidapi.com/Coinranking/api/coinranking1";
+const baseUrl = "https://coinranking1.p.rapidapi.com";
 
 const createRequest = (url) => ({ url, headers: cryptoApiHeaders });
 
@@ -14,7 +14,7 @@ export const cryptoApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl }),
   endpoints: (builder) => ({
     getCryptos: builder.query({
-      query: () => createRequest("/coins"),
+      query: (count) => createRequest(`/coins?limit=${count}`),
     }),
   }),
 });
