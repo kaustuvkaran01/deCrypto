@@ -9,6 +9,7 @@ import {
   Cryptocurrencies,
   News,
   CryptoDetails,
+  Exchanges,
 } from "./components";
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
                 component={CryptoDetails}
               />
               <Route exact path="/news" component={News} />
+              <Route exact path="/exchanges" component={Exchanges} />
             </Switch>
           </div>
         </Layout>

@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useState } from "react";
+
+import { useGetCryptoExchangesQuery } from "../services/cryptoApi";
 
 const Exchanges = () => {
-    return (
-        <div>
-            Exchanges
-        </div>
-    )
-}
+  const { data } = useGetCryptoExchangesQuery();
 
-export default Exchanges
+  console.log(data);
+  return <div>Exchanges</div>;
+};
+
+export default Exchanges;
