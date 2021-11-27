@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
 
 import { Layout, Typography, Space } from "antd";
 
@@ -43,9 +43,9 @@ function App() {
         <div
           className="footer"
           level={5}
-          style={{ color: "white", textAlign: "center" }}
+          style={{ color: "#F0F2F5", textAlign: "center" }}
         >
-          <Typography.Title>
+          <Typography.Title level={3} style={{ color: "#F0F2F5" }}>
             deCrypto
             <br />
             All rights reserved
